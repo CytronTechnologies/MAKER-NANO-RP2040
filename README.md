@@ -23,4 +23,4 @@ Besides modifying the demo program, you can also open one of the [CircuitPython 
 
 ### MicroPython
 
-Follow [this guide](https://www.raspberrypi.org/documentation/rp2040/getting-started/#getting-started-with-micropython) to load the MicroPython firmware on your Maker Pi RP2040.
+Follow [this guide](https://www.raspberrypi.com/documentation/microcontrollers/micropython.html) to load the MicroPython firmware on your Maker Pi RP2040.
