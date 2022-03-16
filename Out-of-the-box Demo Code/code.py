@@ -6,12 +6,11 @@
 #
 # It plays a melody upon power up (slide power switch to ON)
 # and shows running lights (blue LEDs) at the same time.
-# Then the two RGB LEDs will animate the colors, while the 
-# program checking push buttons' state, repeatedly.
+# Then the two RGB LEDs will animate with different colors 
+# while checking push buttons' state, repeatedly.
 # 
-# More info: 
-# 
-# https://circuitpython.org/board/raspberry_pi_pico
+# Download CircuitPython .UF2 for Maker Nano RP2040 here: 
+# https://circuitpython.org/board/cytron_maker_nano_rp2040/
 #
 # Email: support@cytron.io
 # *************************************************
