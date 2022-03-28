@@ -20,11 +20,9 @@ import digitalio
 import neopixel
 import simpleio
 import time
-import pwmio
-from adafruit_motor import servo, motor
 
 # Initialize LEDs
-# LEDs placement on Maker Pi RP2040
+# LEDs placement on Maker Nano RP2040
 LED_PINS = [board.GP0, 
             board.GP1,
             board.GP2,
@@ -37,7 +35,8 @@ LED_PINS = [board.GP0,
             board.GP9,
             board.GP17,
             board.GP19,
-            board.GP16]
+            board.GP16,
+            board.GP18]
 
 LEDS = []
 for pin in LED_PINS:
@@ -91,17 +90,29 @@ while True:
     
     # Check button 1 (GP20)
     if not btn1.value:  # button 1 pressed
-        # Light up all LEDs
-        for i in range(len(LEDS)):
-            LEDS[i].value = True
+        
+        # Toggle LEDs
+        if LEDS[0].value == True:
+            # Turn off all LEDs
+            for i in range(len(LEDS)):
+                LEDS[i].value = False
+                
+            # Play tones
+            simpleio.tone(PIEZO_PIN, 784, duration=0.1)
+            simpleio.tone(PIEZO_PIN, 659, duration=0.15)
+            simpleio.tone(PIEZO_PIN, 262, duration=0.2)
             
-        
-        # Play tones
-        simpleio.tone(PIEZO_PIN, 262, duration=0.1)
-        simpleio.tone(PIEZO_PIN, 659, duration=0.15)
-        simpleio.tone(PIEZO_PIN, 784, duration=0.2)
-        
-        
+        else:
+            # Light up all LEDs
+            for i in range(len(LEDS)):
+                LEDS[i].value = True
+            
+            # Play tones
+            simpleio.tone(PIEZO_PIN, 262, duration=0.1)
+            simpleio.tone(PIEZO_PIN, 659, duration=0.15)
+            simpleio.tone(PIEZO_PIN, 784, duration=0.2)
+            
+            
     # Animate RGB LEDs
     if state == 0:
         if color < 0x101010:
