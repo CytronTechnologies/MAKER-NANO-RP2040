@@ -2,7 +2,7 @@
 This folder shows a few examples for IoT applications.
 
 ## Required Hardware:
-1. [Cytron Maker Pi Pico](https://www.cytron.io/p-maker-pi-pico), [Cytron Maker Pi RP2040](https://www.cytron.io/p-maker-pi-rp2040) or [Maker Nano RP2040](https://www.cytron.io/p-maker-nano-rp2040).
+1. [Cytron Maker Pi Pico](https://www.cytron.io/p-maker-pi-pico), [Maker Pi RP2040](https://www.cytron.io/p-maker-pi-rp2040) or [Maker Nano RP2040](https://www.cytron.io/p-maker-nano-rp2040).
 2. ESP8266 WiFi module (eg: ESP-01, ESP-12F, WROOM-02) with ESP-AT Firmware v2.2.0 and above.<br>
    Latest firmware can be downloaded from [https://github.com/CytronTechnologies/esp-at-binaries](https://github.com/CytronTechnologies/esp-at-binaries).
    
